@@ -97,6 +97,20 @@ a,a:hover{
     padding:0 35px
 }
 
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .image_logo {
+    max-width: 100px;
+    max-height: 75px;
+    width: auto;
+    height: auto; 
+  }
+
 .page-wrapper{
     overflow:hidden;
     background:#e5e5e5;
@@ -121,7 +135,7 @@ aside.menu-sidebar.d-none.d-lg-block.clr{
 }
 
 .header-desktop{
-    background:#0da8e4;
+    background:0 0;
     -webkit-box-shadow:0 2px 5px 0 rgba(0,0,0,.1);
     -moz-box-shadow:0 2px 5px 0 rgba(0,0,0,.1);
     box-shadow:0 2px 5px 0 rgba(0,0,0,.1);
