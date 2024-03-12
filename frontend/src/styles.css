@@ -680,8 +680,6 @@ table.table.table-bordered th{
     outline:0;
     margin-left:5px
 }
-
-
  .price{
     margin:15px 0 0;
     font-weight:800;
@@ -689,6 +687,9 @@ table.table.table-bordered th{
 }
 .detail-section{
     margin-top:60px
+}
+.detail-img{
+    width: 30%;
 }
  .btn-info{
     color:#fff;
