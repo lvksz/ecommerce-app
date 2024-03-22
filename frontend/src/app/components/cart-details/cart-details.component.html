@@ -1,0 +1,60 @@
+<div class="main-content">
+  <div class="section-content section-content-p30">
+    <div class="content-fluid">
+        <div *ngIf="cartItems.length > 0">
+            <table class="table table-bordered">
+                <tr>
+                  <th width="20%">Product image</th>
+                  <th width="50%">Product Details</th>
+                  <th width="30%">Order Details</th>
+                </tr>
+        
+                <tr *ngFor="let cartItem of cartItems">
+                  <td>
+                    <img src="{{cartItem.imageUrl}}" class="img-responsive" width="150px"/>
+                  </td>
+                  <td>
+                    <p>{{cartItem.name}}</p>
+                    <p>{{cartItem.unitPrice}}</p>
+                  </td>
+                  <td>
+                    <div class="items">
+                        <label>Quantity:</label>
+                        <div class="row no-qutters">
+                            <div class="col">
+                                <button (click)="decrement(cartItem)" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-minus"></i>
+                                </button>   
+                            </div>
+                            <div class="col ml-4 mr-2">
+                                {{cartItem.quantity}}
+                            </div>
+                            <div  class="col">
+                                <button (click)="increment(cartItem)" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-plus"></i>
+                                </button>   
+                            </div>
+                            <div class="col-8"></div>
+                        </div>      
+                    </div>
+                    <div>
+                        <button (click)="remove(cartItem)" class="btn btn-primary btn-sm mt-2">Remove</button>
+                    </div>
+                    <p class="mt-2">Total: {{cartItem.quantity * cartItem.unitPrice}}</p>
+                  </td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td style="font-weight: bold;">
+                        <p>Total quantity: {{totalQuantity}}</p>
+                        <p>Total price: {{totalPrice}}</p>
+                    </td>
+                </tr>
+              </table>
+        </div>
+        <div *ngIf="cartItems.length == 0" class="alert alert-warning col-md-12" role="alert">
+            Shopping cart is empty
+        </div>
+    </div>
+  </div>
+</div>
